@@ -1,6 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const app = express();
+app.use(helmet.hidePoweredBy());
 
 
 
@@ -20,4 +21,3 @@ let port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`☕ Server started on port ${port}`);
 });
-app.use(helmet.hidePoweredBy());
